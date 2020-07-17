@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <style>
+    table {
+      border: 2px solid gray;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      border: 2px solid gray;
+      border-collapse: collapse;    
+    }
+  </style>
+  <body>
+  
+  <form method="post" action="<?=ScriptApp.getService().getUrl() ?>">
+    <p>
+      <input type="submit" value="no_finish clear_input" name="no_finish_clear">
+    </p>
+    <?!= output_text ?><br>
+  </form>
+  <p>
+    <h2>gmailシート</h2>
+    <?!= createTable('gmail') ?>
+  </p>
+  <p>
+    <h2>no_finishシート</h2>
+    <?!= createTable('no_finish') ?>
+  </p>
+  <p>
+    <h2>history</h2>
+    <?!= createTable('history') ?>
+  </p>
+
+  <script>
+    //google.script.url.getLocation(function(location){
+    //  console.log(location);
+    //});
+  </script>
+  </body>
+</html>
+
+
